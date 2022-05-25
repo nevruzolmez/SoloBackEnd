@@ -1,0 +1,38 @@
+{
+  "name": "soloproject",
+  "version": "1.0.0",
+  "description": "Soloproject",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nevruzolmez/Soloproject.git "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^5.5.0",
+    "mongoose": "^5.11.8",
+    "node-fetch": "^2.3.0",
+    "nodemon": "^2.0.6",
+    "pg": "^8.7.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^9.0.1",
+    "webpack-dev-server": "^4.4.0"
+  }
+}
