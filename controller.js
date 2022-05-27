@@ -6,7 +6,27 @@ let currentList = "todoList";
 
 const todoMaker = {};
 
+//GET the complete list for the front end
+
+todoMaker.getList = (req, res, next) => {
+  console.log("List is being created");
+  const tempQuery = `Select * from ${currentList}`;
+  db.query(tempQuery)
+    .then((data) => {
+      res.locals.getList = data.rows;
+      next();
+    })
+    .catch((err) => {
+      next({
+        log: "Error on GetList",
+        message: { err: "An Error Occured" },
+      });
+    });
+};
+
 todoMaker.createItem = (req, res, next) => {
+  console.log("Item create");
+  console.log(req.body);
   const tempQuery = `Insert Into ${currentList} (activity, date, input_date)
     Values ($1,$2,$3);`;
   let tempDate = new Date();
